@@ -2,12 +2,9 @@ language: python
 python:
   - "3.7-dev"
 services:
-  - psql
-env:
-  -DJANGO=2.0.12 DB=psql
-install:
-  - pip install -r requirements.txt
+  - docker
+
 before_script:
-  - psql -e 'create database test;' -u root
+  - pip install docker-compose
 script:
-  - python manage.py test
+  - docker-compose run app sh -c "python manage.py test"
