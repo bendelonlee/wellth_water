@@ -1,14 +1,14 @@
 language: python
-    python:
-      - "2.6"
-      - "2.7"
-    services:
-      - psql
-    env:
-      -DJANGO=1.8 DB=psql
-    install:
-      - pip install -r requirements.txt
-    before_script:
-      - psql -e 'create database test;' -u root
-    script:
-      - python manage.py test
+  python:
+    - "2.6"
+    - "2.7"
+  services:
+    - psql
+  env:
+    -DJANGO=1.8 DB=psql
+  install:
+    - pip install -r requirements.txt
+  before_script:
+    - psql -e 'create database test;' -u root
+  script:
+    - python manage.py test
