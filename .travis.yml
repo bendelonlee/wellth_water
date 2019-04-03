@@ -1,10 +1,10 @@
 language: python
 python:
-  - "3.7"
+  - "3.7.0"
 services:
   - psql
 env:
-  -DJANGO=1.8 DB=psql
+  -DJANGO=2.0.12 DB=psql
 install:
   - pip install -r requirements.txt
 before_script:
