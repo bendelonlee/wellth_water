@@ -3,9 +3,9 @@ language: python
       - "2.6"
       - "2.7"
     services:
-      - mysql
+      - psql
     env:
-      -DJANGO=1.8 DB=mysql
+      -DJANGO=1.8 DB=psql
     install:
       - pip install -r requirements.txt
     before_script:
